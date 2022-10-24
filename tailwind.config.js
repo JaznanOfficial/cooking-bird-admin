@@ -1,9 +1,32 @@
-/** @type {import('tailwindcss').Config} */
 const withMT = require("@material-tailwind/react/utils/withMT");
-module.exports =withMT( {
-  content: ["./src/**/*.{html,js}"],
+
+module.exports = withMT({
+  content: [
+    "./src/**/*.{html,js}",
+    "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
+  ],
+
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        ubuntu: ["Ubuntu", "sans-serif"],
+        monoton: ["Monoton", "cursive", "Ubuntu", "sans-serif"],
+      },
+      colors: {
+        "navy-900": "#231E41",
+      },
+    },
   },
-  plugins: [],
-})
+
+  daisyui: {
+    themes: [
+      {
+        mytheme: {
+          primary: "#fecaca",
+        },
+      },
+    ],
+  },
+
+  plugins: [require("daisyui", "flowbite/plugin")],
+});
