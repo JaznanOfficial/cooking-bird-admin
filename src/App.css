@@ -1,6 +1,3 @@
-
-
-
 .App {
   text-align: center;
 }
@@ -30,6 +27,23 @@
 .App-link {
   color: #61dafb;
 }
+
+/* navbar style */
+.style-header {
+  font-family: 'Faster One', cursive;
+}
+/* navbar style */
+
+
+
+/* navbar style */
+@media screen and (max-width: 640px) {
+  .style-header {
+    font-size: 18px !important;
+    line-height: 80%;
+  }
+}
+/* navbar style */
 
 @keyframes App-logo-spin {
   from {
